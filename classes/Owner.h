@@ -5,7 +5,15 @@ using namespace std;
 
 class Owner {
 public:
+	Owner();
 
+	string getOwner();
+	void setOwner(string);
+
+	string getObject();
+	void setObject(string);
+
+	void have(int);
 private:
 	string owner;
 	string object;

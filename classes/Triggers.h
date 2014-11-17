@@ -1,4 +1,4 @@
-#ifndef TRIGGERS_H
+#ifndef TRIGGERS_H_
 #define TRIGGERS_H_
 #include <string>
 using namespace std;
@@ -10,4 +10,4 @@ private:
 	//Command command[];
 	//Condition condition;
 };
-#endif
+#endif/*TRIGGERS_H_*/
