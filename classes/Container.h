@@ -1,6 +1,7 @@
 #ifndef CONTAINER_H_
 #define CONTAINER_H_
 #include <string>
+#include <vector>
 
 #include "Item.h"
 #include "Triggers.h"
@@ -21,26 +22,31 @@ public:
 
 	string getDescription();
 	void setDescription(string);
+
+	string getConditionSatisfy();
+	void setConditionSatisfy(string);
 	
-	Item * getAccept();
-	void setAccept(Item*);
+	vector<string> getAccept();
+	void setAccept(string);
 
 	Item * getItem();
 	void setItem(Item*);
+	
+	vector<Triggers> getTriggers();
+	void setTriggers(Triggers);
 
-	Creature * getCreature();
-	void setCreature(Creature*);
-
-	Triggers * getTriggers();
-	void setTriggers(Triggers*);
+	vector<Item> getItemList();
+	void setItemList(Item);
 
 private:
 	string name;
 	Status status;
 	string description;
-	Item * accept;
+	vector<string> accept_list;
 	Item * item;
-	Triggers * triggers;
+	vector<Item> item_list;
+	vector<Triggers> triggers;
+	string conditionSatisfy;
 
 
 };

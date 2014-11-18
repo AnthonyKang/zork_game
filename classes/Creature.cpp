@@ -1,6 +1,7 @@
 #include "Creature.h"
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 Creature::Creature(){}
@@ -26,16 +27,31 @@ void Creature::setDescription(string description){
 	this->description = description;
 }
 
-Item * Creature::getVulnerability(){
-	return vulnerability;
+vector<string> Creature::getVulnerabilityList(){
+	return vulnerabilityList;
 }
-void Creature::setVulnerability(Item* vulnerability){
-	this->vulnerability = vulnerability;
+void Creature::setVulnerabilityList(string vulnerability){
+	(this->vulnerabilityList).push_back(vulnerability);
 }
 
-Triggers * Creature::getTriggers(){
+vector<Triggers> Creature::getTriggers(){
 	return triggers;
 }
-void Creature::setTriggers(Triggers* triggers){
-	this->triggers = triggers;
+void Creature::setTriggers(Triggers triggers){
+	(this->triggers).push_back(triggers);
+}
+
+string Creature::getConditionSatisfy(){
+	return conditionSatisfy;
+}
+void Creature::setConditionSatisfy(string print){
+	this->conditionSatisfy = print;
+}
+
+Attack Creature::getAttack(){
+	return attack;
+}
+
+void Creature::setAttack(Attack attack){
+	this->attack = attack;
 }

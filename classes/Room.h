@@ -7,6 +7,7 @@
 #include "Item.h"
 #include "Creature.h"
 #include "Triggers.h"
+#include <vector>
 
 
 using namespace std;
@@ -22,6 +23,7 @@ private:
 	Item * item;
 	Creature * creature;
 	Triggers * triggers;
+	vector<Item> item_list;
 public:
 	Room();
 

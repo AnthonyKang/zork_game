@@ -20,6 +20,9 @@ public:
 	string getWriting();
 	void setWriting(string);
 
+	string getOnFlag();
+	void setOnFlag(string);
+
 	string getDescription();
 	void setDescription(string);
 	
@@ -36,6 +39,8 @@ private:
 	string description;
 	Triggers * triggers;
 	int on_off;
+	string onFlag;
+	
 
 };
 #endif
